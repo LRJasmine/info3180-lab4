@@ -1,5 +1,8 @@
 from flask import Flask
 
+UPLOAD_FOLDER = './app/static/uploads'
+
+
 # Config Values
 USERNAME = 'admin'
 PASSWORD = 'password123'
