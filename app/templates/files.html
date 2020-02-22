@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<div>
+    <ul>
+        {% for img in images%}
+        <li>ji<img src="{{ url_for('img') }}"></li>
+        {% endfor %}
+    </ul> 
+</div>
+{% endblock %}
