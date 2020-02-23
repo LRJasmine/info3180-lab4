@@ -4,9 +4,13 @@
 
 <div>
     <ul>
-        {% for img in images%}
-        <li>ji<img src="{{ url_for('img') }}"></li>
+        {% for img in images %}
+        <li>list</li>
         {% endfor %}
-    </ul> 
+        {% for img in images %}
+        <li>2</li>
+        <li>{{ img }} <img src="{{ url_for('img', filename = img) }}"></li>
+        {% endfor %}
+    </ul>
 </div>
 {% endblock %}

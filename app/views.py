@@ -67,7 +67,7 @@ def get_uploaded_images():
     for subdir, dirs, files in os.walk(rootdir + 'app/static/uploads'):
         for file in files:
             print (os.path.join(subdir, file))
-            imageslist.append("file")
+            imageslist.append(file)
 
     return imageslist
 
