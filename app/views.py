@@ -55,8 +55,8 @@ def upload():
 
 @app.route('/files')
 def files():
-    images = get_uploaded_images()
-    return render_template('files.html', images=images)
+    listimg = get_uploaded_images()
+    return render_template('files.html', listimg=listimg)
 
 
 
@@ -64,7 +64,7 @@ def get_uploaded_images():
     imageslist = []
     rootdir = os.getcwd()
     print (rootdir)
-    for subdir, dirs, files in os.walk(rootdir + 'app/static/uploads'):
+    for subdir, dirs, files in os.walk(rootdir + '/app/static/uploads'):
         for file in files:
             print (os.path.join(subdir, file))
             imageslist.append(file)

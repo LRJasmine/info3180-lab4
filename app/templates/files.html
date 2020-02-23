@@ -4,12 +4,11 @@
 
 <div>
     <ul>
-        {% for img in images %}
-        <li>list</li>
-        {% endfor %}
-        {% for img in images %}
-        <li>2</li>
-        <li>{{ img }} <img src="{{ url_for('img', filename = img) }}"></li>
+        {% if not listimg%}
+        <li>{% print (listimg) %} List is empty</li>
+        {% endif %}
+        {% for img in listimg[1:] %}
+        <li><img src="{{ url_for('static', filename = 'uploads/'+img) }}"></li>
         {% endfor %}
     </ul>
 </div>
