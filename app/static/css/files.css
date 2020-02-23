@@ -1,0 +1,15 @@
+.gridimages {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#images {
+    height: 400px;
+    width: 400px;
+    padding: 25px;
+}
+
+#list {
+    display: inline-flex;
+    list-style-type: none;
+}

@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 
+{% block css %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/files.css') }}">
+{% endblock%}
+
+
 {% block main %}
 
-<div>
-    <ul>
+<div class="gridimagaes">
+    <ul id="list">
         {% if not listimg%}
-        <li>{% print (listimg) %} List is empty</li>
+        <li>No files to display</li>
         {% endif %}
         {% for img in listimg[1:] %}
-        <li><img src="{{ url_for('static', filename = 'uploads/'+img) }}"></li>
+        <li><img src="{{ url_for('static', filename = 'uploads/'+img) }}" id="images"></li>
         {% endfor %}
     </ul>
 </div>
